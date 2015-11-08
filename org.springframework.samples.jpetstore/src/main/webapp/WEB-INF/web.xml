@@ -34,9 +34,7 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/dataAccessContext-local.xml /WEB-INF/applicationContext.xml</param-value>
-		<!--
 		<param-value>/WEB-INF/dataAccessContext-jta.xml  /WEB-INF/applicationContext.xml</param-value>
-		-->
 	</context-param>
 
 	<!--
