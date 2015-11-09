@@ -42,7 +42,10 @@ City: </TD><TD>
   <spring:bind path="accountForm.account.city">
 	  <input type="text" name="<c:out value="${status.expression}"/>" value="<c:out value="${status.value}"/>"/>
   </spring:bind>
-</TD></TR>
+</TD><TD>
+<div id=my-map></div>
+</TD>
+</TR>
 <TR bgcolor="#FFFF88"><TD>
 State:</TD><TD>
   <spring:bind path="accountForm.account.state">
@@ -99,3 +102,34 @@ Favourite Category:</TD><TD>
   </spring:bind>
 </TD></TR>
 </TABLE>
+<script>
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('my-map'), {
+    zoom: 8,
+    center: {lat: -34.397, lng: 150.644}
+  });
+  var geocoder = new google.maps.Geocoder();
+
+  document.getElementById('submit').addEventListener('click', function() {
+    geocodeAddress(geocoder, map);
+  });
+}
+
+function geocodeAddress(geocoder, resultsMap) {
+  var address = document.getElementById('city').value;
+  geocoder.geocode({'address': address}, function(results, status) {
+    if (status === google.maps.GeocoderStatus.OK) {
+      resultsMap.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: resultsMap,
+        position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0yLf0E_pHRxLsVz9xjaPgPwbSgn7gznc&signed_in=true&callback=initMap" async defer></script>
+
