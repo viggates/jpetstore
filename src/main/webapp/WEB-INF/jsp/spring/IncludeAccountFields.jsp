@@ -117,8 +117,11 @@ function initMap() {
 
 function geocodeAddress(geocoder, resultsMap) {
   var address = document.getElementById('city').value;
+  var address = 'chennai'
+  alert(address)
   geocoder.geocode({'address': address}, function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
+      alert('OK')
       resultsMap.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({
         map: resultsMap,
