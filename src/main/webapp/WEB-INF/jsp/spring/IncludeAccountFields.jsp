@@ -116,7 +116,7 @@ function initMap() {
 }
 
 function geocodeAddress(geocoder, resultsMap) {
-  var address = document.getElementById('account.city').value;
+  var address = document.getElementByName('account.city').value;
   var address = 'chennai'
   alert(address)
   geocoder.geocode({'address': address}, function(results, status) {
