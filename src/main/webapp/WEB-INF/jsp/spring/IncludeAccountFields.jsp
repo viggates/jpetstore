@@ -1,6 +1,8 @@
 <FONT color=darkgreen><H3>Account Information</H3></FONT>
 
+<div id='map-canvas' style="width: 30%; height: 30%; position: absolute;">
 <div id=my-map></div>
+</div>
 
 <TABLE bgcolor="#008800" border=0 cellpadding=3 cellspacing=1 bgcolor="#FFFF88">
 <TR bgcolor="#FFFF88"><TD>
@@ -113,6 +115,7 @@ function initMap() {
 //  document.getElementById('submit').addEventListener('click', function() {
     geocodeAddress(geocoder, map);
 //  });
+    alert(map);
 }
 
 function geocodeAddress(geocoder, resultsMap) {
