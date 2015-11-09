@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.springframework.samples</groupId>
 	<artifactId>org.springframework.samples.jpetstore</artifactId>
-	<name>org.springframework.samples.jpetstore</name>
+	<name>jpetstore</name>
 	<packaging>war</packaging>
 	<version>1.0.0-SNAPSHOT</version>
 	<properties>
