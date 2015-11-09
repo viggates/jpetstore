@@ -1,5 +1,7 @@
 <FONT color=darkgreen><H3>Account Information</H3></FONT>
 
+<div id=my-map></div>
+
 <TABLE bgcolor="#008800" border=0 cellpadding=3 cellspacing=1 bgcolor="#FFFF88">
 <TR bgcolor="#FFFF88"><TD>
 First name:</TD><TD>
@@ -42,8 +44,6 @@ City: </TD><TD>
   <spring:bind path="accountForm.account.city">
 	  <input type="text" name="<c:out value="${status.expression}"/>" value="<c:out value="${status.value}"/>"/>
   </spring:bind>
-</TD><TD>
-<div id=my-map></div>
 </TD>
 </TR>
 <TR bgcolor="#FFFF88"><TD>
