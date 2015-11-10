@@ -132,7 +132,7 @@ Favourite Category:</TD><TD>
 function geocodeAddress(geocoder, resultsMap) {
   var address = document.getElementsByName('account.city')[0].value;
   if (address == '') {
-      var address = 'chennai'
+      var address = 'omaha'
   }
   geocoder.geocode({'address': address}, function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
