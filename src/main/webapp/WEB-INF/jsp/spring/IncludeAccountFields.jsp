@@ -141,5 +141,5 @@ function geocodeAddress(geocoder, resultsMap) {
 }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0yLf0E_pHRxLsVz9xjaPgPwbSgn7gznc&signed_in=true&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0yLf0E_pHRxLsVz9xjaPgPwbSgn7gznc&signed_in=true&callback=displayMap"></script>
 
