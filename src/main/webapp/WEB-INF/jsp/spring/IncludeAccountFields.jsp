@@ -114,7 +114,10 @@ function initMap() {
     center: new google.maps.LatLng(-34.397,150.644),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
-  alert(map);
+  $('#my-map').on('shown', function () {
+  google.maps.event.trigger(map, 'resize');
+  map.setCenter(new google.maps.LatLng(-34.397,150.644));
+})
 //  var geocoder = new google.maps.Geocoder();
 
 //  document.getElementById('submit').addEventListener('click', function() {
