@@ -1,8 +1,11 @@
 <FONT color=darkgreen><H3>Account Information</H3></FONT>
 
+<TABLE><TR><TD>
 <div id='map-canvas' style="width: 30%; height: 30%; position: absolute;">
 <div id=my-map></div>
 </div>
+</TD></TR>
+</TABLE>
 
 <TABLE bgcolor="#008800" border=0 cellpadding=3 cellspacing=1 bgcolor="#FFFF88">
 <TR bgcolor="#FFFF88"><TD>
@@ -111,6 +114,7 @@ function initMap() {
     center: new google.maps.LatLng(-34.397,150.644),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
+  alert(map);
 //  var geocoder = new google.maps.Geocoder();
 
 //  document.getElementById('submit').addEventListener('click', function() {
