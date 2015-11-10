@@ -43,6 +43,7 @@ City: </TD><TD>
   <spring:bind path="accountForm.account.city">
 	  <input type="text" name="<c:out value="${status.expression}"/>" value="<c:out value="${status.value}"/>"/>
   </spring:bind>
+  <button id="mapit">Map</button>
 </TD>
 </TR>
 <TR bgcolor="#FFFF88"><TD>
@@ -125,12 +126,15 @@ Favourite Category:</TD><TD>
                                       mapTypeId: google.maps.MapTypeId.ROADMAP
                                     }
                     map = new google.maps.Map(document.getElementById("my-map"), myOptions);
+                    var geocoder = new google.maps.Geocoder();
+                    geocodeAddress(geocoder, map);
   }
 
 function geocodeAddress(geocoder, resultsMap) {
   var address = document.getElementsByName('account.city')[0].value;
-  alert(address)
-  var address = 'chennai'
+  if (address == '') {
+      var address = 'chennai'
+  }
   alert(address)
   geocoder.geocode({'address': address}, function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
