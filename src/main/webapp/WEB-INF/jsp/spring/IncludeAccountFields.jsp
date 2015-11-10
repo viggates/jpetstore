@@ -114,10 +114,6 @@ function initMap() {
     center: new google.maps.LatLng(-34.397,150.644),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
-  $('#my-map').on('shown', function () {
-  google.maps.event.trigger(map, 'resize');
-  map.setCenter(new google.maps.LatLng(-34.397,150.644));
-  });
 //  var geocoder = new google.maps.Geocoder();
 
 //  document.getElementById('submit').addEventListener('click', function() {
@@ -125,6 +121,12 @@ function initMap() {
 //  });
 //    alert(map);
 }
+  $('#my-map').on('shown', function () {
+  alert('inside')
+  google.maps.event.trigger(map, 'resize');
+  map.setCenter(new google.maps.LatLng(-34.397,150.644));
+  });
+
 
 function geocodeAddress(geocoder, resultsMap) {
   var address = document.getElementsByName('account.city')[0].value;
