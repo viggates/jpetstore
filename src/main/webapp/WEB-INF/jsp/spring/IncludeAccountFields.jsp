@@ -2,7 +2,7 @@
 
 <TABLE><TR><TD>
 <div id='map-canvas' style="width: 30%; height: 30%; position: absolute;">
-<div id=my-map></div>
+<div id='my-map' style="width: 100%; height: 100%; position: absolute;"></div>
 </div>
 </TD></TR>
 </TABLE>
@@ -110,7 +110,7 @@ Favourite Category:</TD><TD>
 <script>
 function initMap() {
   var map = new google.maps.Map(document.getElementById('my-map'), {
-    zoom: 8,
+//    zoom: 8,
     center: new google.maps.LatLng(-34.397,150.644),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
