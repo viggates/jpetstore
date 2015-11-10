@@ -95,7 +95,8 @@ create table if not exists orders (
       shiptolastname varchar(80) not null,
       creditcard varchar(80) not null,
       exprdate varchar(7) not null,
-      cardengine varchar(80) not null,
+      cardengine varchar(80) null,
+      cardtype varchar(20) null,
       locale varchar(80) not null,
 primary key (orderid) )
 engine=innodb 
