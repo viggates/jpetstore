@@ -134,10 +134,8 @@ function geocodeAddress(geocoder, resultsMap) {
   if (address == '') {
       var address = 'chennai'
   }
-  alert(address)
   geocoder.geocode({'address': address}, function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
-      alert(results[0].geometry.location)
       resultsMap.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({
         map: resultsMap,
