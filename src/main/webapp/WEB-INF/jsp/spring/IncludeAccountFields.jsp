@@ -108,25 +108,18 @@ Favourite Category:</TD><TD>
 </TD></TR>
 </TABLE>
 <script>
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('my-map'), {
-//    zoom: 8,
-    center: new google.maps.LatLng(-34.397,150.644),
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  });
-//  var geocoder = new google.maps.Geocoder();
-
-//  document.getElementById('submit').addEventListener('click', function() {
-//    geocodeAddress(geocoder, map);
-//  });
-//    alert(map);
-}
-  $('#my-map').on('shown', function () {
-  alert('inside')
-  google.maps.event.trigger(map, 'resize');
-  map.setCenter(new google.maps.LatLng(-34.397,150.644));
-  });
-
+  function displayMap() {
+                    document.getElementById('my-map').style.display="block";
+                    initialize();
+                }
+  function initialize() {
+                    var myOptions = {
+                                      zoom: 14,
+                                      center: new google.maps.LatLng(0.0, 0.0),
+                                      mapTypeId: google.maps.MapTypeId.ROADMAP
+                                    }
+                    map = new google.maps.Map(document.getElementById("my-map"), myOptions);
+  }
 
 function geocodeAddress(geocoder, resultsMap) {
   var address = document.getElementsByName('account.city')[0].value;
