@@ -43,7 +43,7 @@ City: </TD><TD>
   <spring:bind path="accountForm.account.city">
 	  <input type="text" name="<c:out value="${status.expression}"/>" value="<c:out value="${status.value}"/>"/>
   </spring:bind>
-  <button id="mapit">Map</button>
+  <button id="mapit" onClick="displayMap()">Map</button>
 </TD>
 </TR>
 <TR bgcolor="#FFFF88"><TD>
