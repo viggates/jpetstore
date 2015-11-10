@@ -1,6 +1,5 @@
 <FONT color=darkgreen><H3>Account Information</H3></FONT>
 
-<TABLE><TR><TD>
 
 <TABLE bgcolor="#008800" border=0 cellpadding=3 cellspacing=1 bgcolor="#FFFF88">
 <TR bgcolor="#FFFF88"><TD>
@@ -64,14 +63,13 @@ Country: </TD><TD>
 	  <input type="text" size="15" name="<c:out value="${status.expression}"/>" value="<c:out value="${status.value}"/>"/>
   </spring:bind>
 </TD></TR>
-</TABLE>
-
-</TD>
+<TR>
+<TD>Map</TD>
 <TD>
 <div id='map-canvas' style="width: 30%; height: 30%; position: absolute;">
 <div id='my-map' style="width: 100%; height: 100%; position: absolute;"></div>
-</div>
-</TD></TR>
+</TD>
+</TR>
 </TABLE>
 
 
