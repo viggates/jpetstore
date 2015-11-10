@@ -66,6 +66,15 @@ Country: </TD><TD>
 </TD></TR>
 </TABLE>
 
+</TD>
+<TD>
+<div id='map-canvas' style="width: 30%; height: 30%; position: absolute;">
+<div id='my-map' style="width: 100%; height: 100%; position: absolute;"></div>
+</div>
+</TD></TR>
+</TABLE>
+
+
 <FONT color=darkgreen><H3>Profile Information</H3></FONT>
 
 <TABLE bgcolor="#008800" border=0 cellpadding=3 cellspacing=1 >
@@ -100,13 +109,6 @@ Favourite Category:</TD><TD>
     <input type="checkbox" name="<c:out value="${status.expression}"/>" value="true" <c:if test="${status.value}">checked</c:if>>
 		Enable MyBanner
   </spring:bind>
-</TD></TR>
-</TABLE>
-</TD>
-<TD>
-<div id='map-canvas' style="width: 30%; height: 30%; position: absolute;">
-<div id='my-map' style="width: 100%; height: 100%; position: absolute;"></div>
-</div>
 </TD></TR>
 </TABLE>
 
