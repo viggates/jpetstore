@@ -66,16 +66,16 @@ Country: </TD><TD>
 <TR bgcolor="#FFFF88">
 <TD>Map</TD>
 <TD>
-<div id='map-canvas' style="width: 23.5%; height: 15%; position: absolute;">
+<div id='map-canvas' style="width: 23.5%; height: 20%; position: absolute;">
 <div id='my-map' style="width: 100%; height: 100%; position: absolute;"></div>
 </TD>
 </TR>
 </TABLE>
 
-<BR>& nbsp;<BR> 
-<BR>& nbsp;<BR> 
-<BR>& nbsp;<BR> 
-<BR>& nbsp;<BR> 
+<BR>
+<BR>
+<BR>
+
 <FONT color=darkgreen><H3>Profile Information</H3></FONT>
 
 <TABLE bgcolor="#008800" border=0 cellpadding=3 cellspacing=1 >
