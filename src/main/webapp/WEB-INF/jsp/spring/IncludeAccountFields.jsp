@@ -108,14 +108,15 @@ Favourite Category:</TD><TD>
 function initMap() {
   var map = new google.maps.Map(document.getElementById('my-map'), {
     zoom: 8,
-    center: {lat: -34.397, lng: 150.644}
+    center: new google.maps.LatLng(-34.397,150.644),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
   });
-  var geocoder = new google.maps.Geocoder();
+//  var geocoder = new google.maps.Geocoder();
 
 //  document.getElementById('submit').addEventListener('click', function() {
-    geocodeAddress(geocoder, map);
+//    geocodeAddress(geocoder, map);
 //  });
-    alert(map);
+//    alert(map);
 }
 
 function geocodeAddress(geocoder, resultsMap) {
